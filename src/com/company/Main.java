@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends Menu{
 
     public static void main(String[] args) throws IllegalAccessException {
 
@@ -20,12 +20,12 @@ public class Main {
         Arrays.sort(array);
         System.out.println("Відсортування в порядку зростання : " + Arrays.toString(array));
 
+        System.out.println();
 //     Друге завдання
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Натисніть 1: щоб вивести toString()");
-            System.out.println("Натисніть 2: щоб засетити одинаковий  об`єкт класу Авто (fill()");
+            menu();
             switch (scanner.next()) {
                 case "1": {
                     Car[][] car = new Car[getRandomValue(1, 6)][getRandomValue(1, 6)];
